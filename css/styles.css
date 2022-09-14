@@ -356,6 +356,7 @@ img {
 
 .footer-blocks {
     display: flex;
+    align-items: baseline;
 }
 
 .footer .logo {
@@ -391,6 +392,13 @@ img {
     color: rgba(255, 255, 255, 0.6);
 }
 
+.address-map:hover,
+.address-map:focus,
+.address-contact:hover,
+.address-contact:focus {
+    color: var(--accent-color);
+}
+
 /* Портфоліо фільтр */
 .portfolio-filter {
     display: flex;
@@ -421,7 +429,6 @@ img {
 
 .action-icons {
     margin-left: 70px;
-    padding-top: 12px;
 } 
 
 .action {
@@ -457,17 +464,6 @@ img {
     gap: var(--project-grid-gap);
 }
 
-.project-item {
-    background-color: var(--primary-bg-color);
-}
-
-.project-item:hover,
-.project-item:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
-        0px 4px 4px rgba(0, 0, 0, 0.06), 
-        1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
 .project-wrapper {
     padding: 20px 24px;
     border-right: 1px solid var(--border-line-portfolio);
@@ -491,7 +487,16 @@ img {
 }
 
 .project-link {
+    display: inline-block;
     text-decoration: none;
+    background-color: var(--primary-bg-color);
+}
+
+.project-link:hover,
+.project-link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+    0px 4px 4px rgba(0, 0, 0, 0.06), 
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 
