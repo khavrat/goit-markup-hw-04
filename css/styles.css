@@ -8,6 +8,7 @@
     --button-hover-color: #188CE8;
     --border-line: #ECECEC;
     --border-line-portfolio: #EEEEEE;
+    --icon-color: #AFB1B8;
     --logo-accent: #000000;
     --footer-bg-color: #2F303A;
     --project-grid-gap: 30px;
@@ -94,7 +95,7 @@ img {
 
 .nav-link,
 .contacts-link {
-    display: inline-block;
+    display: block;
     padding: 32px 0;
     text-decoration: none;
     font-weight: 500;
@@ -110,6 +111,7 @@ img {
 
 /* Контакти хедер */
 .contacts-link {
+    fill: var(--secondary-text-color);
     color: var(--secondary-text-color);
 }
 
@@ -118,10 +120,19 @@ img {
 }
 
 .nav-link:hover,
-.nav-link:focus,
+.nav-link:focus {
+    color: var(--accent-color);
+}
+
+.connect {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
 .contacts-link:hover,
 .contacts-link:focus {
-    color: var(--accent-color)
+    fill: var(--accent-color);
+    color: var(--accent-color);
 }
 
 /* Герой */
@@ -140,9 +151,8 @@ img {
     margin-left: auto;
     margin-right: auto;
     background-color: var(--hero-bg-color);
-    background-image: linear-gradient(to right, rgb(47, 48, 58, 0.4), rgb(47, 48, 58, 0.4)),
+    background-image: linear-gradient(rgb(47, 48, 58, 0.4), rgb(47, 48, 58, 0.4)),
         url(../images/heroimg.jpg);
-    
 }
 
 .hero-title {
@@ -197,13 +207,8 @@ img {
     padding: 25px 100px; 
     width: 270px;
     height: 120px;
-    background-color: #F5F4FA;
+    background-color: var(--secondary-bg-color);
     border-radius: 4px;
-}
-
-.feature-icon {
-    width: 70px;
-    height: 70px;
 }
 
 .feature-list,
@@ -261,12 +266,14 @@ img {
 .team-item {
     text-align: center;
     background: var(--primary-bg-color);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
+        0px 1px 1px rgba(0, 0, 0, 0.14), 
+        0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
 
 .team-wrapper {
-    padding: 30px 10px;
+    padding: 30px 32px;
 }
 .team-list {
     flex-wrap: wrap;
@@ -281,16 +288,74 @@ img {
 }
 
 .team-position {
+    margin-bottom: 16px;
     font-size: 16px;
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: var(--secondary-text-color);
 }
 
+.icon-list {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.icon-network {
+    display: block;
+    padding: 12px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;  
+    fill: var(--icon-color);
+} 
+
+.icon-network:hover,
+.icon-network:focus {
+    background-color: var(--accent-color);
+    fill: var(--primary-bg-color);
+}
+
+.client-title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--prymary-text-color);
+}
+
+.client-list {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.icon-client {
+    display: inline-block;
+    text-align: center;
+    padding: 16px 32px;
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--icon-color);
+    border-radius: 4px;
+    fill: var(--icon-color);
+}
+
+.icon-client:hover,
+.icon-client:focus {
+    fill: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
+
 /* Футер */
 .footer {
     padding: 60px 0;
     background-color: var(--footer-bg-color);
+}
+
+.footer-blocks {
+    display: flex;
 }
 
 .footer .logo {
@@ -342,13 +407,46 @@ img {
     letter-spacing: 0.03em;
     color: var(--prymary-text-color);
     background: var(--secondary-bg-color);
+    box-shadow: none;
 }
 
 .button.select:hover,
 .button.select:focus {
     color: var(--primary-bg-color);
     background: var(--accent-color);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
+        0px 1px 2px rgba(0, 0, 0, 0.08), 
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.action-icons {
+    margin-left: 70px;
+} 
+
+.action {
+    display: block;
+    padding-top: 12px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--primary-bg-color);
+}
+
+.icon-network-footer {
+    display: block;
+    padding: 12px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;  
+    fill: var(--primary-bg-color);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.icon-network-footer:hover,
+.icon-network-footer:focus {
+    background-color: var(--accent-color);
 }
 
 /* Портфоліо картки проектів */
@@ -361,6 +459,13 @@ img {
 
 .project-item {
     background-color: var(--primary-bg-color);
+}
+
+.project-item:hover,
+.project-item:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+        0px 4px 4px rgba(0, 0, 0, 0.06), 
+        1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-wrapper {
